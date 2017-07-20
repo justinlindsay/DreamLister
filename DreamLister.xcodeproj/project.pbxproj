@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61DED401F2145F6008490E9 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED3F1F2145F6008490E9 /* MaterialView.swift */; };
 		F6C572611F1EAAD200A4A7E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */; };
 		F6C572631F1EAAD200A4A7E8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C572621F1EAAD200A4A7E8 /* MainVC.swift */; };
 		F6C572661F1EAAD200A4A7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C572641F1EAAD200A4A7E8 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F61DED3F1F2145F6008490E9 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		F6C5725D1F1EAAD200A4A7E8 /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C572621F1EAAD200A4A7E8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61DED3E1F2145C4008490E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F61DED3F1F2145F6008490E9 /* MaterialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		F6C572541F1EAAD200A4A7E8 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		F6C5725F1F1EAAD200A4A7E8 /* DreamLister */ = {
 			isa = PBXGroup;
 			children = (
+				F61DED3E1F2145C4008490E9 /* View */,
 				F6C572851F1EB12100A4A7E8 /* Model */,
 				F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */,
 				F6C572621F1EAAD200A4A7E8 /* MainVC.swift */,
@@ -182,6 +193,7 @@
 				F6C5727E1F1EB11A00A4A7E8 /* Store+CoreDataProperties.swift in Sources */,
 				F6C572631F1EAAD200A4A7E8 /* MainVC.swift in Sources */,
 				F6C572831F1EB11A00A4A7E8 /* ItemType+CoreDataClass.swift in Sources */,
+				F61DED401F2145F6008490E9 /* MaterialView.swift in Sources */,
 				F6C5727D1F1EB11A00A4A7E8 /* Store+CoreDataClass.swift in Sources */,
 				F6C5727F1F1EB11A00A4A7E8 /* Image+CoreDataClass.swift in Sources */,
 				F6C572611F1EAAD200A4A7E8 /* AppDelegate.swift in Sources */,

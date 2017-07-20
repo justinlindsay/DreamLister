@@ -45,10 +45,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntj-vc-Ald">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntj-vc-Ald" customClass="MaterialView" customModule="DreamLister" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="327" height="134"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-v3-8hx">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-v3-8hx">
                                                             <rect key="frame" x="8" y="17" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="CWv-0A-F9H"/>
@@ -95,6 +95,9 @@
                                                         <constraint firstAttribute="bottom" secondItem="W05-cq-rBz" secondAttribute="bottom" constant="8" id="W8r-Ix-yYN"/>
                                                         <constraint firstItem="XQH-BZ-J5h" firstAttribute="leading" secondItem="7vI-v3-8hx" secondAttribute="trailing" constant="8" id="ytu-N3-kNx"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -154,4 +157,7 @@
             <point key="canvasLocation" x="112.8" y="690.40479760119945"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tesla" width="800" height="489"/>
+    </resources>
 </document>
