@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F61DED401F2145F6008490E9 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED3F1F2145F6008490E9 /* MaterialView.swift */; };
+		F61DED421F214847008490E9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED411F214847008490E9 /* ItemCell.swift */; };
 		F6C572611F1EAAD200A4A7E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */; };
 		F6C572631F1EAAD200A4A7E8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C572621F1EAAD200A4A7E8 /* MainVC.swift */; };
 		F6C572661F1EAAD200A4A7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C572641F1EAAD200A4A7E8 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		F61DED3F1F2145F6008490E9 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		F61DED411F214847008490E9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		F6C5725D1F1EAAD200A4A7E8 /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C572621F1EAAD200A4A7E8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F61DED3F1F2145F6008490E9 /* MaterialView.swift */,
+				F61DED411F214847008490E9 /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F61DED421F214847008490E9 /* ItemCell.swift in Sources */,
 				F6C5727E1F1EB11A00A4A7E8 /* Store+CoreDataProperties.swift in Sources */,
 				F6C572631F1EAAD200A4A7E8 /* MainVC.swift in Sources */,
 				F6C572831F1EB11A00A4A7E8 /* ItemType+CoreDataClass.swift in Sources */,
