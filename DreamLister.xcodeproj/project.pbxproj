@@ -127,8 +127,8 @@
 		F6C572861F1EB12800A4A7E8 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				F6C572781F1EB11A00A4A7E8 /* Image+CoreDataProperties.swift */,
 				F6C5727C1F1EB11A00A4A7E8 /* ItemType+CoreDataProperties.swift */,
+				F6C572781F1EB11A00A4A7E8 /* Image+CoreDataProperties.swift */,
 				F6C5727A1F1EB11A00A4A7E8 /* Item+CoreDataProperties.swift */,
 				F6C572761F1EB11A00A4A7E8 /* Store+CoreDataProperties.swift */,
 			);

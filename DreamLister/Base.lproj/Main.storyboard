@@ -33,6 +33,9 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="nw6-2N-nuB"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h0B-6I-HFE">
                                 <rect key="frame" x="16" y="120" width="343" height="547"/>
@@ -173,6 +176,9 @@
                                     <constraint firstAttribute="width" constant="30" id="LX9-fv-HTe"/>
                                     <constraint firstAttribute="height" constant="30" id="bXY-eu-C8c"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="zly-xm-jcv" eventType="touchUpInside" id="HTE-lK-YMM"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUX-77-e48" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
                                 <rect key="frame" x="124" y="82" width="235" height="40"/>
@@ -263,6 +269,9 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="frg-DK-MP6">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="s0M-9K-4ip">
                             <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="zly-xm-jcv" id="ANI-jO-mfK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -270,6 +279,7 @@
                         <outlet property="detailsField" destination="cAm-L4-BFb" id="j0t-jG-ez6"/>
                         <outlet property="priceField" destination="IfC-SL-YxJ" id="c49-Mp-w4C"/>
                         <outlet property="storePicker" destination="ul5-aZ-dbC" id="lga-Xj-cQe"/>
+                        <outlet property="thumbImg" destination="Hta-zN-KR4" id="7nA-tp-pZb"/>
                         <outlet property="titleField" destination="sUX-77-e48" id="pfj-dp-dUJ"/>
                     </connections>
                 </viewController>
@@ -306,6 +316,6 @@
         <image name="tesla" width="800" height="489"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="of7-Ab-J35"/>
+        <segue reference="tUj-wb-QbR"/>
     </inferredMetricsTieBreakers>
 </document>

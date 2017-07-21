@@ -27,7 +27,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.delegate = self
         tableView.dataSource = self
         
-        generateTestData()
+        //generateTestData()
         attemptFetch()
         
     }
@@ -61,7 +61,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "ItemDetailVC" {
+        if segue.identifier == "ItemDetailsVC" {
             
             if let destination = segue.destination as? ItemDetailsVC {
                 
@@ -105,8 +105,23 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true)
         
-        fetchRequest.sortDescriptors = [dateSort]
+        if segment.selectedSegmentIndex == 0 {
+            
+            fetchRequest.sortDescriptors = [dateSort]
+            
+        } else if segment.selectedSegmentIndex == 1 {
+            
+            fetchRequest.sortDescriptors = [priceSort]
+            
+        } else if segment.selectedSegmentIndex == 2 {
+            
+            fetchRequest.sortDescriptors = [titleSort]
+            
+        }
+        
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -144,13 +159,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             
         case.insert:
             if let indexPath = newIndexPath {
+            
                 tableView.insertRows(at: [indexPath], with: .fade)
+            
             }
             break
             
         case.delete:
             if let indexPath = indexPath {
+                
                 tableView.deleteRows(at: [indexPath], with: .fade)
+            
             }
             break
             
@@ -159,17 +178,22 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
                 
                 let cell = tableView.cellForRow(at: indexPath) as! ItemCell
                 configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
-                
+            
             }
             break
             
         case.move:
             
             if let indexPath = indexPath {
+             
                 tableView.deleteRows(at: [indexPath], with: .fade)
+            
             }
+            
             if let indexPath = newIndexPath {
+              
                 tableView.insertRows(at: [indexPath], with: .fade)
+            
             }
             break
             
@@ -197,5 +221,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         ad.saveContext()
     }
 
+    
+    @IBAction func segmentChange(_ sender: UISegmentedControl) {
+        
+        attemptFetch()
+        tableView.reloadData()
+        
+    }
+    
+    
 }
 
