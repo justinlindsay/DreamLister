@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F61DED401F2145F6008490E9 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED3F1F2145F6008490E9 /* MaterialView.swift */; };
 		F61DED421F214847008490E9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED411F214847008490E9 /* ItemCell.swift */; };
+		F61DED451F2160E9008490E9 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED441F2160E9008490E9 /* ItemDetailsVC.swift */; };
+		F61DED471F2162FE008490E9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DED461F2162FE008490E9 /* CustomTextField.swift */; };
 		F6C572611F1EAAD200A4A7E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */; };
 		F6C572631F1EAAD200A4A7E8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C572621F1EAAD200A4A7E8 /* MainVC.swift */; };
 		F6C572661F1EAAD200A4A7E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C572641F1EAAD200A4A7E8 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		F61DED3F1F2145F6008490E9 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		F61DED411F214847008490E9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		F61DED441F2160E9008490E9 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
+		F61DED461F2162FE008490E9 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F6C5725D1F1EAAD200A4A7E8 /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6C572621F1EAAD200A4A7E8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -60,10 +64,20 @@
 		F61DED3E1F2145C4008490E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F61DED461F2162FE008490E9 /* CustomTextField.swift */,
 				F61DED3F1F2145F6008490E9 /* MaterialView.swift */,
 				F61DED411F214847008490E9 /* ItemCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		F61DED431F2160C2008490E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6C572621F1EAAD200A4A7E8 /* MainVC.swift */,
+				F61DED441F2160E9008490E9 /* ItemDetailsVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		F6C572541F1EAAD200A4A7E8 = {
@@ -87,8 +101,8 @@
 			children = (
 				F61DED3E1F2145C4008490E9 /* View */,
 				F6C572851F1EB12100A4A7E8 /* Model */,
+				F61DED431F2160C2008490E9 /* Controller */,
 				F6C572601F1EAAD200A4A7E8 /* AppDelegate.swift */,
-				F6C572621F1EAAD200A4A7E8 /* MainVC.swift */,
 				F6C572641F1EAAD200A4A7E8 /* Main.storyboard */,
 				F6C5726A1F1EAAD200A4A7E8 /* Assets.xcassets */,
 				F6C5726C1F1EAAD200A4A7E8 /* LaunchScreen.storyboard */,
@@ -197,6 +211,7 @@
 				F6C5727E1F1EB11A00A4A7E8 /* Store+CoreDataProperties.swift in Sources */,
 				F6C572631F1EAAD200A4A7E8 /* MainVC.swift in Sources */,
 				F6C572831F1EB11A00A4A7E8 /* ItemType+CoreDataClass.swift in Sources */,
+				F61DED451F2160E9008490E9 /* ItemDetailsVC.swift in Sources */,
 				F61DED401F2145F6008490E9 /* MaterialView.swift in Sources */,
 				F6C5727D1F1EB11A00A4A7E8 /* Store+CoreDataClass.swift in Sources */,
 				F6C5727F1F1EB11A00A4A7E8 /* Image+CoreDataClass.swift in Sources */,
@@ -206,6 +221,7 @@
 				F6C572821F1EB11A00A4A7E8 /* Item+CoreDataProperties.swift in Sources */,
 				F6C572811F1EB11A00A4A7E8 /* Item+CoreDataClass.swift in Sources */,
 				F6C572801F1EB11A00A4A7E8 /* Image+CoreDataProperties.swift in Sources */,
+				F61DED471F2162FE008490E9 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
