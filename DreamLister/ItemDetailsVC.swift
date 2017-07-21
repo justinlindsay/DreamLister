@@ -20,6 +20,7 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
     
     
     var stores = [Store]()
+    var itemToEdit: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +54,12 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
 //        
 //        ad.saveContext()
         getStores()
+        
+        if itemToEdit != nil {
+            
+            loadItemData()
+            
+        }
 
     }
     
@@ -98,9 +105,47 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
     }
     
+    func loadItemData() {
+        
+        if let item = itemToEdit {
+            
+            titleField.text = item.title
+            priceField.text = "\(item.price)"
+            detailsField.text = item.details
+            
+            if let store = item.toStore {
+                
+                var index = 0
+                repeat {
+                    
+                    let s = stores[index]
+                    if s.name == store.name {
+                        
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    
+                    index += 1
+                    
+                } while (index < stores.count)
+            }
+        }
+        
+    }
+    
     @IBAction func savePressed(_ sender: UIButton) {
         
-        let item = Item(context: context)
+        var item: Item!
+        
+        if itemToEdit == nil {
+            
+            item = Item(context: context)
+            
+        } else {
+            
+            item = itemToEdit
+        }
+        
         
         if let title = titleField.text {
             
@@ -125,6 +170,5 @@ class ItemDetailsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDeleg
         
         
     }
-    
     
 }
